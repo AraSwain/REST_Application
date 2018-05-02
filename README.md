@@ -3,8 +3,8 @@
 This is a simple REST application developed with Jersey(JAX-RS).
 
 **Resources**
-- Employee
-- Dept
+- employee
+- dept
 
 
 
@@ -14,3 +14,9 @@ This is a simple REST application developed with Jersey(JAX-RS).
 
 | empno | ename | job | mgr | hiredate | sal | comm | deptno |
 |-------|-------|-----|-----|----------|-----|------|--------|
+
+
+**DEPT**
+| deptno | dname | loc |
+|--------|-------|-----|
+
