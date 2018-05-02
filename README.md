@@ -17,6 +17,7 @@ This is a simple REST application developed with Jersey(JAX-RS).
 
 
 **DEPT**
+
 | deptno | dname | loc |
 |--------|-------|-----|
 
