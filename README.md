@@ -1,3 +1,16 @@
-# SimpleREST_App
+## Employee Management System
 
-How to create a simple REST application with JAX-RS Jersey
+This is a simple REST application developed with Jersey(JAX-RS).
+
+**Resources**
+- Employee
+- Dept
+
+
+
+### Database Design
+
+**EMPLOYEE** 
+
+| empno | ename | job | mgr | hiredate | sal | comm | deptno |
+|-------|-------|-----|-----|----------|-----|------|--------|
