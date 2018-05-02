@@ -92,7 +92,7 @@ values(
  1300, null, 10
 );
  
-/*
+
 insert into salgrade
 values (1, 700, 1200);
 insert into salgrade
@@ -103,6 +103,6 @@ insert into salgrade
 values (4, 2001, 3000);
 insert into salgrade
 values (5, 3001, 9999);
-*/
+
  
 commit;
