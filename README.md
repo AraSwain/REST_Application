@@ -21,3 +21,13 @@ This is a simple REST application developed with Jersey(JAX-RS).
 | deptno | dname | loc |
 |--------|-------|-----|
 
+
+### API Designs
+endpoint **http://localhost/empsystem/employee** 
+
+| Method | Reqyest Payload | Response |
+|--------|-------|-----|
+| GET |  |  |
+| POST |  |  |
+| PUT |  |  |
+| DELETE |  |  |
