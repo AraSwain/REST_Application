@@ -1,6 +1,9 @@
-## E-Commerce Application
+# E-Commerce Application
 
 This is a simple REST application developed with Jersey(JAX-RS). This system is designed to provide only basic functionality via RESTful APIs. This application is developed to show how to develope a RESTful Application. Currently this application supports the following functionalities
+
+## API Design
+### Resources and Supported Operations
 
 **Category**
 - Add a *category*
@@ -19,12 +22,6 @@ This is a simple REST application developed with Jersey(JAX-RS). This system is 
 - Update  *seller* detils
 - Delete an existing  *seller*
 - Retrieve details of an existing *seller*
-
-**Resources**
-- category
-- product
-- seller
-
 
 
 ### Database Design
@@ -47,12 +44,43 @@ This is a simple REST application developed with Jersey(JAX-RS). This system is 
 |----|-------|---------|-------------|---------|-------|-----|-------|
 
 
-### API Designs
+### Sample REST Requests
+
 endpoint **http://localhost/mykart/category** 
 
-| Method | Reqyest Payload | Response |
+| Method | Request Payload | Response |
 |--------|-------|-----|
 | GET |  |  |
 | POST |  |  |
 | PUT |  |  |
 | DELETE |  |  |
+
+
+endpoint **category** 
+
+| Method | endpoint | Request Payload | Response |
+|--------|----------|-----------------|----------|
+| GET |  |  |  |
+| POST |  |  |  |
+| PUT |  |  |  |
+| DELETE |  |  |  |
+
+
+endpoint **product** 
+
+| Method | endpoint | Request Payload | Response |
+|--------|----------|-----------------|----------|
+| GET |  |  |  |
+| POST |  |  |  |
+| PUT |  |  |  |
+| DELETE |  |  |  |
+
+endpoint **seller** 
+
+| Method | endpoint | Request Payload | Response |
+|--------|----------|-----------------|----------|
+| GET |  |  |  |
+| POST |  |  |  |
+| PUT |  |  |  |
+| DELETE |  |  |  |
+
