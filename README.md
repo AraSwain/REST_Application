@@ -1,29 +1,50 @@
-## Employee Management System
+## E-Commerce Application
 
-This is a simple REST application developed with Jersey(JAX-RS).
+This is a simple REST application developed with Jersey(JAX-RS). This system is designed to provide only basic functionality via RESTful APIs. This application is developed to show how to develope a RESTful Application. Currently this application supports the following functionalities
+**Product**
+- Add a *category*
+- Update a *category*
+- Delete an empty *category*
+- Retrieve details of an existing *category*
+- Add a *product* (inside a *category*)
+- Update *product* details (inside a *category*)
+- Delete a *product* (inside a *category*)
+- Retrieve details of an existing *product*
+**Seller**
+- Add a *seller*
+- Update  *seller* detils
+- Delete an existing  *seller*
+- Retrieve details of an existing *seller*
 
 **Resources**
-- employee
-- dept
+- category
+- product
+- seller
 
 
 
 ### Database Design
 
-**EMPLOYEE** 
+**CATEGORY** 
 
-| empno | ename | job | mgr | hiredate | sal | comm | deptno |
-|-------|-------|-----|-----|----------|-----|------|--------|
+| id | catname | description | active | 
+|----|---------|-------------|--------|
 
 
-**DEPT**
+**PRODUCT**
 
-| deptno | dname | loc |
-|--------|-------|-----|
+| id | pname | sku | description | categoryid | mrp | discount | colour |
+|----|-------|-----|-------------|------------|-----|----------|--------|
+
+
+**SELLER**
+
+| id | sname | company | contactname | address | phone | fax | email |
+|----|-------|---------|-------------|---------|-------|-----|-------|
 
 
 ### API Designs
-endpoint **http://localhost/empsystem/employee** 
+endpoint **http://localhost/mykart/category** 
 
 | Method | Reqyest Payload | Response |
 |--------|-------|-----|
