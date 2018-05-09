@@ -1,18 +1,18 @@
 package com.aravind.restapp.model;
 
-import java.util.Date;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * 
  * @author Aravind
  *
  */
+@XmlRootElement
 public class Employee {
     private int empNo;
     private String empName;
     private String job;
     private int manager;
-    private Date hireDate;
     private double salary;
     private double commission;
     private int deptNo;
@@ -20,13 +20,12 @@ public class Employee {
     public Employee() {
     }
     
-    public Employee(int empNo, String empName, String job, int manager, Date hireDate, double salary, double commission,
+    public Employee(int empNo, String empName, String job, int manager, double salary, double commission,
 	    int deptNo) {
 	this.empNo = empNo;
 	this.empName = empName;
 	this.job = job;
 	this.manager = manager;
-	this.hireDate = hireDate;
 	this.salary = salary;
 	this.commission = commission;
 	this.deptNo = deptNo;
@@ -64,14 +63,6 @@ public class Employee {
         this.manager = manager;
     }
 
-    public Date getHireDate() {
-        return hireDate;
-    }
-
-    public void setHireDate(Date hireDate) {
-        this.hireDate = hireDate;
-    }
-
     public double getSalary() {
         return salary;
     }
@@ -99,7 +90,7 @@ public class Employee {
     @Override
     public String toString() {
 	return "Employee [EmpNo=" + empNo + ", EmpName=" + empName + ", Job=" + job + ", Manager=" + manager
-		+ ", HireDate=" + hireDate + ", Salary=" + salary + ", Commission=" + commission + ", DeptNo=" + deptNo
+		+ ", Salary=" + salary + ", Commission=" + commission + ", DeptNo=" + deptNo
 		+ "]";
     }   
     

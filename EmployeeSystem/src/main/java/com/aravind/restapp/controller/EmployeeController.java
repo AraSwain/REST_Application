@@ -1,9 +1,14 @@
 package com.aravind.restapp.controller;
 
+import java.util.List;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+
+import com.aravind.restapp.model.Employee;
+import com.aravind.restapp.service.EmployeeService;
 
 /**
  * 
@@ -13,10 +18,13 @@ import javax.ws.rs.core.MediaType;
 @Path("/employee")
 public class EmployeeController {
     
+    private EmployeeService empService = new EmployeeService();
+    
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getEmployees() {
-	return "Hello World";
+    @Produces(MediaType.APPLICATION_XML)
+    public List<Employee> getEmployees() {
+	return empService.getAllEmployees();
+	
     }
 
 }

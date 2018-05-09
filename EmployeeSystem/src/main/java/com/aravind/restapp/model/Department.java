@@ -1,10 +1,13 @@
 package com.aravind.restapp.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * 
  * @author Aravind
  *
  */
+@XmlRootElement
 public class Department {
     private int deptNo;
     private String deptName;
