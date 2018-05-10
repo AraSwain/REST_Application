@@ -17,6 +17,11 @@ This app is developed with JAX-RS with Jersy with the basic concepts of RESTful 
   * Custom Media types
   * Custom Error Codes
 
+While importing code to eclipse, add the below two lines to the `${CATALINA.HOME}/conf/server.xml` file
+```sh
+<Context docBase="MyKart" path="/mykart" reloadable="true" source="org.eclipse.jst.jee.server:MyKart"/>
+<Context docBase="EmployeeSystem" path="/ems" reloadable="true" source="org.eclipse.jst.jee.server:EmployeeSystem"/>
+```
 
 # MyKart (E-Commerce Application)
 
