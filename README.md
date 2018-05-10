@@ -3,19 +3,19 @@ Here we will develop two REST based application
 
 - **Basic REST App (Employee Management System)**
 This app is developed with JAX-RS with Jersy with the basic concepts of RESTful app development like
-* Implemented REST methods for CRUD Operation.
-* Cosuming XML as payload (Accept: application/xml)
-* Produces XML output
+  * Implemented REST methods for CRUD Operation.
+  * Cosuming XML as payload (Accept: application/xml)
+  * Produces XML output
 
 - **Advanced REST App (MyKart : an e-commerce app)**
-* Followed HAETOUS property of REST Architecture
-* Followed Idempotency
-* Accepts JSON and produces JSON data
-* Object Conversion with Jackson APIs
-* Supported PATCH method along with GET, POST, PUT, DELETE
-* Authentication
-* Custom Media types
-* Custom Error Codes
+  * Followed HAETOUS property of REST Architecture
+  * Followed Idempotency
+  * Accepts JSON and produces JSON data
+  * Object Conversion with Jackson APIs
+  * Supported PATCH method along with GET, POST, PUT, DELETE
+  * Authentication
+  * Custom Media types
+  * Custom Error Codes
 
 
 # MyKart (E-Commerce Application)
