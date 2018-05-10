@@ -1,4 +1,4 @@
-package com.aravind.restapp.model;
+package com.ems.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

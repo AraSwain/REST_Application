@@ -1,27 +1,19 @@
-package com.aravind.restapp.service;
+package com.ems.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.aravind.restapp.model.Department;
-import com.aravind.restapp.model.Employee;
+import com.ems.dao.MockedDatabase;
+import com.ems.model.Department;
+import com.ems.model.Employee;
 
 public class DepartmentService {
     
-    private Map<Integer, Department> deptMap = new HashMap<>();
+    private static Map<Integer, Department> deptMap = MockedDatabase.getDepartments();
 
-    public DepartmentService() {
-	init();
-    }
-    
-    public void init() {
-	deptMap = DataLoader.loadDeptData();
-    }
-    
     public List<Department> getAllDepartments() {
-
 	List<Department> deptList = new ArrayList<>();
 	
 	for(int deptNo : deptMap.keySet()) {

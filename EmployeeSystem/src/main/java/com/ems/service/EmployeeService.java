@@ -1,24 +1,18 @@
-package com.aravind.restapp.service;
+package com.ems.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.aravind.restapp.model.Department;
-import com.aravind.restapp.model.Employee;
+import com.ems.dao.MockedDatabase;
+import com.ems.model.Department;
+import com.ems.model.Employee;
 
 public class EmployeeService {
 
-    private Map<Integer, Employee> empMap = new HashMap<>();
-
-    public EmployeeService() {
-	init();
-    }
-
-    public void init() {
-	empMap = DataLoader.loadEmployeeData();
-    }
+    private static Map<Integer, Employee> empMap = MockedDatabase.getEmployees();
+    private static int lastEmpNo = 109;
 
     /**
      * This method will give all the employees present in the system
@@ -64,5 +58,12 @@ public class EmployeeService {
 	}
 
 	return empList;
+    }
+    
+    public Employee addEmployee(Employee emp) {
+	lastEmpNo = lastEmpNo + 1;
+	emp.setEmpNo(lastEmpNo);
+	empMap.put(lastEmpNo, emp);
+	return emp;
     }
 }
