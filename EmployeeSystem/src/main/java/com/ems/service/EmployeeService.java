@@ -33,7 +33,7 @@ public class EmployeeService {
      * This method will the employee details by its id
      * 
      * @param empId
-     * @return employee details
+     * @return employee
      */
     public Employee getEmployee(int empId) {
 	return empMap.get(empId);
@@ -59,11 +59,26 @@ public class EmployeeService {
 
 	return empList;
     }
-    
+
+    /**
+     * Add an employee to the system.
+     * 
+     * @param emp
+     * @return the newly added Employee
+     */
     public Employee addEmployee(Employee emp) {
 	lastEmpNo = lastEmpNo + 1;
 	emp.setEmpNo(lastEmpNo);
-	empMap.put(lastEmpNo, emp);
+	empMap.put(emp.getEmpNo(), emp);
 	return emp;
+    }
+
+    public Employee updateEmployee(Employee emp) {
+	empMap.put(emp.getEmpNo(), emp);
+	return emp;
+    }
+
+    public void deleteEmployee(int empNo) {
+	empMap.remove(empNo);
     }
 }

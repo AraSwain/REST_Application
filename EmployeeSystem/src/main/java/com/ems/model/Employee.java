@@ -3,6 +3,7 @@ package com.ems.model;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
+ * Model class for Employee
  * 
  * @author Aravind
  *
