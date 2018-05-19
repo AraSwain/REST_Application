@@ -60,6 +60,20 @@ public class EmployeeService {
 	return empList;
     }
 
+    //TODO: write logic for pagination.
+    public List<Employee> getAllEmployeesPaginated(int start, int size) {
+	List<Employee> empList = new ArrayList<>();
+	Employee emp = null;
+
+	for (int dno : empMap.keySet()) {
+	    emp = empMap.get(dno);
+	    
+	}
+
+	return empList;
+    }
+    
+    
     /**
      * Add an employee to the system.
      * 
