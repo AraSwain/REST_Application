@@ -1,4 +1,4 @@
-## REST Application Development
+# REST Application Development
 Here we will develop two REST based application 
 
 - **Basic REST App (Employee Management System)**

@@ -10,6 +10,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import com.ems.model.Employee;
@@ -25,43 +26,51 @@ import com.ems.service.EmployeeService;
 @Path("/employees")
 public class EmployeeController {
 
-    private EmployeeService empService = new EmployeeService();
+	private EmployeeService empService = new EmployeeService();
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public List<Employee> getAllEmployees() {
-	return empService.getAllEmployees();
-    }
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Employee> getAllEmployees(@QueryParam("dept") int dept,
+										@QueryParam("start") int start,
+										@QueryParam("size") int size) {
+		if(dept > 0) {
+			return empService.getAllEmployeesInADepartment(dept);
+		}
+		if(start > 0 && size > 0) {
+			return empService.getAllEmployeesPaginated(start, size);
+		}
+		return empService.getAllEmployees();
+	}
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("{empNo}")
-    public Employee getEmployeeById(@PathParam("empNo") int empNo) {
-	return empService.getEmployee(empNo);
-    }
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{empNo}")
+	public Employee getEmployeeById(@PathParam("empNo") int empNo) {
+		return empService.getEmployee(empNo);
+	}
 
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Employee addEmployee(Employee emp) {
-	return empService.addEmployee(emp);
-    }
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Employee addEmployee(Employee emp) {
+		return empService.addEmployee(emp);
+	}
 
-    @PUT
-    @Path("{empNo}")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Employee updateEmployee(@PathParam("empNo") int eno, Employee emp) {
-	emp.setEmpNo(eno);
-	return empService.updateEmployee(emp);
-    }
+	@PUT
+	@Path("{empNo}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Employee updateEmployee(@PathParam("empNo") int eno, Employee emp) {
+		emp.setEmpNo(eno);
+		return empService.updateEmployee(emp);
+	}
 
-    @DELETE
-    @Path("{empNo}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String deleteEmployee(@PathParam("empNo") int eno) {
-	empService.deleteEmployee(eno);
-	return "Employee with id " + eno + " deleted successfully !";
-    }
-    
+	@DELETE
+	@Path("{empNo}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String deleteEmployee(@PathParam("empNo") int eno) {
+		empService.deleteEmployee(eno);
+		return "Employee with id " + eno + " deleted successfully !";
+	}
+
 }
